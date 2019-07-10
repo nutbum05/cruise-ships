@@ -23,7 +23,6 @@ describe('Ship', () => {
   });
   it('can dock at the different port', () => {
     const dover = new Port('Dover');
-    const ship = new Ship(dover)
     const calais = new Port('Calais');
     ship.dock(calais);
     expect(ship.currentPort.name).toBe(calais.name);

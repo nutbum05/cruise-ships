@@ -1,7 +1,6 @@
 /* eslint-disable func-names */
 function Ship(port) {
   this.currentPort = port;
-  this.ships = [];
 }
 Ship.prototype = {
   setSail: function () {
