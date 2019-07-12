@@ -25,6 +25,6 @@ describe('Ship', () => {
     const dover = new Port('Dover');
     const calais = new Port('Calais');
     ship.dock(calais);
-    expect(ship.currentPort.name).toBe(calais.name);
+    expect(ship.currentPort).toEqual(calais);
   });
 });
