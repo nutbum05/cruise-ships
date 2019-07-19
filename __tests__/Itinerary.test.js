@@ -1,12 +1,12 @@
-const Itinerary = require('../src/Itinerary')
+const Itinerary = require('../src/Itinerary');
 const Port = require('../src/Port.js');
 
 describe('Itinerary', () => {
   let itinerary;
-  let port
+  let port;
   beforeEach(() => {
+    port = jest.fn();
     itinerary = new Itinerary(port);
-    port = new Port('Dover')
   });
   it('can be instantiated', () => {
     expect(new Itinerary()).toBeInstanceOf(Object);

@@ -7,7 +7,8 @@ Port.prototype = {
     this.ships.push(ship);
   },
   removeShip: function (ship) {
-    this.ships.splice((this.ships.indexOf(ship), 1));
+    const shipToRem = this.ships.indexOf(ship);
+    this.ships.splice(shipToRem, 1);
   },
 };
 

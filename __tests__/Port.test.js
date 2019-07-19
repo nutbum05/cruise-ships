@@ -1,11 +1,11 @@
 const Port = require('../src/Port.js');
 
 describe('Port', () => {
-  let port
+  let port;
   let ship;
   beforeEach(() => {
     port = new Port('Dover');
-     ship = {};
+    ship = jest.fn()
   });
   it('can be instantiated', () => {
     expect(new Port()).toBeInstanceOf(Object);
@@ -17,12 +17,12 @@ describe('Port', () => {
     port.addShip(ship);
     expect(port.ships).toContain(ship);
   });
-  it('can remove a ship',() => {
-const titanic = {};
-const olimpic = {};
-port.addShip(titanic);
-port.addShip(olimpic);
-port.removeShip(olimpic);
+  it('can remove a ship', () => {
+    const titanic = jest.fn();
+    const olimpic = jest.fn();
+    port.addShip(titanic);
+    port.addShip(olimpic);
+    port.removeShip(olimpic);
     expect(port.ships).toEqual([titanic]);
   });
 });
